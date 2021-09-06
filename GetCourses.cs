@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
-namespace AZDBFunctionPOST
+namespace AZDBFunctionPOST 
 {
     public static class GetCourses
     {
