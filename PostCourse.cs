@@ -14,6 +14,7 @@ namespace AZDBFunctionPOST
 {
     public static class PostCourse
     {
+
         [FunctionName("PostCourse")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function,"post", Route = null)] HttpRequest req,

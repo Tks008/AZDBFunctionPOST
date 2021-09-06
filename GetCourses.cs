@@ -14,6 +14,7 @@ namespace AZDBFunctionPOST
 {
     public static class GetCourses
     {
+        /*
         [FunctionName("GetCourses")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
@@ -42,6 +43,6 @@ namespace AZDBFunctionPOST
             _connection.Close();
             // Return the HTTP status code of 200 OK and the list of courses
             return new OkObjectResult(_lst);
-        }
+        }*/
     }
 }
