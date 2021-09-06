@@ -24,8 +24,9 @@ namespace AZDBFunctionPOST
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             // We then use the JsonConvert class to convert the string of the request body to a Course object
             Course data = JsonConvert.DeserializeObject<Course>(requestBody);
-            string _connection_string = "Server=tcp:tks007dbserver.database.windows.net,1433;Initial Catalog=tks007DB;Persist Security Info=False;User ID=tks007;Password=Tksantra007))&;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
+            /// string _connection_string = "Server=tcp:tks007dbserver.database.windows.net,1433;Initial Catalog=tks007DB;Persist Security Info=False;User ID=tks007;Password=Tksantra007))&;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string _connection_string = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_AZSQLConnection");
             string _statement = "INSERT INTO Course(CourseID,CourseName,rating) VALUES(@param1,@param2,@param3)";
             SqlConnection _connection = new SqlConnection(_connection_string);
             _connection.Open();
